@@ -83,17 +83,6 @@ class FlutterShareMe {
     return result;
   }
  
-  
-  ///use system share ui
-  Future<String?> shareToSystem({required String msg}) async {
-    String? result;
-    try {
-      result =
-          await _channel.invokeMethod<String>(_methodSystemShare, {'msg': msg});
-    } catch (e) {
-      return 'false';
-    }
-    return result;
-  }
+ 
  
 }
