@@ -38,7 +38,6 @@ public class FlutterShareMePlugin implements MethodCallHandler, FlutterPlugin, A
     final private static String _methodWhatsAppBusiness = "whatsapp_business_share";
      
     private Activity activity;
-    private static CallbackManager callbackManager;
     private MethodChannel methodChannel;
  
     @Override
@@ -56,7 +55,7 @@ public class FlutterShareMePlugin implements MethodCallHandler, FlutterPlugin, A
     private void onAttachedToEngine(BinaryMessenger messenger) {
         methodChannel = new MethodChannel(messenger, "flutter_share_me");
         methodChannel.setMethodCallHandler(this);
-        callbackManager = CallbackManager.Factory.create();
+         
     }
 
     /**
